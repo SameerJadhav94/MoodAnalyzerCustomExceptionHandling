@@ -16,9 +16,9 @@ public class MoodAnalyserTest {
         Assert.assertEquals("Happy", result);
     }
     @Test
-    public void givenMessageContainsNullShouldReturnExceptionMessageInputCannotBeNull(){
+    public void givenMessageContainsNullShouldReturnHappy(){
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String result = moodAnalyser.analyzeMood();
-        Assert.assertEquals("Input Cannot Be null", result);
+        Assert.assertEquals("Happy", result);
     }
 }
