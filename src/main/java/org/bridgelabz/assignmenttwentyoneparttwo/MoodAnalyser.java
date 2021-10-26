@@ -7,9 +7,13 @@ package org.bridgelabz.assignmenttwentyoneparttwo;
  */
 public class MoodAnalyser {
     /***
-     * @param message -> In Sad Mood Should Return Sad
+     * @param message -> If In Sad Mood Should Return Sad Else Return Happy
      */
     public String analyzeMood(String message) {
-        return "Sad";
+        if(message.toLowerCase().contains("Sad")){
+            return "Sad";
+        }else {
+            return "Happy";
+        }
     }
 }
