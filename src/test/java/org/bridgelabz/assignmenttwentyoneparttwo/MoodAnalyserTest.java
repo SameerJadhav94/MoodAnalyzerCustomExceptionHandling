@@ -15,4 +15,10 @@ public class MoodAnalyserTest {
         String result = moodAnalyser.analyzeMood();
         Assert.assertEquals("Happy", result);
     }
+    @Test
+    public void givenMessageContainsNullShouldReturnExceptionMessageInputCannotBeNull(){
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String result = moodAnalyser.analyzeMood();
+        Assert.assertEquals("Input Cannot Be null", result);
+    }
 }

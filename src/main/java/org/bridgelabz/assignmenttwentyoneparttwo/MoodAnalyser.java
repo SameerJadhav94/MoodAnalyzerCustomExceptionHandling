@@ -1,5 +1,4 @@
 package org.bridgelabz.assignmenttwentyoneparttwo;
-
 /**
  * @author -> Sameer Jadhav
  * @version -> 16.0.2
@@ -13,10 +12,15 @@ public class MoodAnalyser {
     }
 
     public String analyzeMood() {
-        if(message.toLowerCase().contains("sad")){
-            return "Sad";
-        }else {
-            return "Happy";
+        try{
+            if(message.toLowerCase().contains("sad")){
+                return "Sad";
+            }else {
+                return "Happy";
+            }
+        }catch (NullPointerException e){
+            return ("Input Cannot Be null");
         }
+
     }
 }
